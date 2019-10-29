@@ -9,13 +9,17 @@ header{
     color: whitesmoke;
     background: rgb(48, 47, 47);
 }
-.col-4{
-    background: grey; 
-}
+
 h4{
     text-align: center;
     color: whitesmoke;
 }
-.col-8{
-    width: 100%;
+aside{
+    background: grey;
+    float: left;
+    width: 25%;
+}
+section{
+    width: 75%;
+    float: right;
 }
