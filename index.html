@@ -1,22 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Weather Dashboard</title>
 </head>
+
 <body>
-    
+    <!--Start of header-->
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <!--End of header-->
+    <!--Start of main section-->
+    <main>
+        <div class="conatainer">
+            <div class="row">
+                <div class="col-4">
+                    <h4>Search For a City</h4>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search City"
+                            aria-label="City Search" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                        <div class="card">
+                                <div class="card-header">
+                                  City Name: (date)
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">Temperature</li>
+                                  <li class="list-group-item">Humidity</li>
+                                  <li class="list-group-item">Wind Speed</li>
+                                </ul>
+                              </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
 
 
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-<script src="./assets/javascript.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./assets/javascript.js"></script>
 </body>
+
 </html>

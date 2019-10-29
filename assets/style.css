@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+html.body { 
+    height:100%; 
+}
+header{
+    text-align: center;
+    color: whitesmoke;
+    background: rgb(48, 47, 47);
+}
+.col-4{
+    background: grey; 
+}
+h4{
+    text-align: center;
+    color: whitesmoke;
+}
+.col-8{
+    width: 100%;
+}
