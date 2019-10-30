@@ -17,17 +17,11 @@ $(".btn-primary").on("click", function () {
 
         tempF = (((response.main.temp) - 273.15) * 1.80 + 32).toFixed(2)
          $("<div>").addClass("City").text((response.name) + ":  " + moment().format('MMMM Do YYYY, h:mm:ss a')).appendTo(cityDiv)
-         $("<div>").addClass("divItem Temperature").text("Temperature: " + (tempF) + " °F").appendTo(cityDiv)
-         $("<div>").addClass("divItem Humidity").text("Humidity: " + (response.main.humidity) + " %").appendTo(cityDiv)
-         $("<div>").addClass("divItem Wind").text("Wind Speed: " + (response.wind.speed) + " m/s").appendTo(cityDiv)
-        //$("ol").append("<li>Appended item</li>");
+         $("<div>").addClass("Temperature").text("Temperature: " + (tempF) + " °F").appendTo(cityDiv)
+         $("<div>").addClass("Humidity").text("Humidity: " + (response.main.humidity) + " %").appendTo(cityDiv)
+         $("<div>").addClass("Wind").text("Wind Speed: " + (response.wind.speed) + " m/s").appendTo(cityDiv)
         
-        console.log(response.weather[0].id)
 
-
-        
-        
-        // Thunderstorm, Drizzle, Clear, Rain, Snow, Clouds
         if(response.weather[0].id >= 200 && response.weather[0].id < 240){
             $(cityDiv).addClass("thunderstorm")
         }
@@ -49,15 +43,6 @@ $(".btn-primary").on("click", function () {
         if(response.weather[0].id >= 801 && response.weather[0].id < 810){
             $(cityDiv).addClass("clouds")
         }
-         
-        
-        
-        // $("div.card").append(newList, newCityTemp, newCityHumidity, newCityWind)
-        
-
-
-
-
     })
 })
 
