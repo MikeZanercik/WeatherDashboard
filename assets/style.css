@@ -1,9 +1,7 @@
 *{
     box-sizing: border-box;
 }
-html.body { 
-    height:100%; 
-}
+
 header{
     text-align: center;
     color: whitesmoke;
@@ -18,8 +16,43 @@ aside{
     background: grey;
     float: left;
     width: 25%;
+
+}
+.list-group-item{
+    opacity: 0.2;
+    color: white
+}
+.card{
+    color: white;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 section{
     width: 75%;
     float: right;
+}
+.rain{
+    opacity:0.7;
+    background-image: url(./images/Rain-Background.jpg);
+}
+.clear{
+    background-image: url(./images/clearsky.jpg);
+}
+.snow{
+    background-image: url(./images/snow.jpeg);
+}
+.thunderstorm{
+    background-image: url(./images/thunderstorm.jpg)
+}
+.drizzle{
+    background-image: url(./images/drizzle.jpg);
+}
+.foggy{
+    background-image: url(./images/foggy.jpg);
+}
+.clouds{
+    background-image: url(./images/clouds.jpg);
 }

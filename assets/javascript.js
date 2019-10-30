@@ -12,14 +12,50 @@ $(".btn-primary").on("click", function () {
         method: "GET"
     }).then(function (response) {
         console.log(response)
-        tempF = (((response.main.temp) - 273.15) * 1.80 + 32).toFixed(2)
-        var newList = $("<ul>").addClass("City").text(response.name)
-        var newCityTemp = $("<li>").addClass("list-group-item Temperature").text("Temperature: " + (tempF) + " °F");
-        var newCityHumidity = $("<li>").addClass("list-group-item Humidity").text("Humidity: " + (response.main.humidity) + " %");
-        var newCityWind = $("<li>").addClass("list-group-item Wind").text("Wind Speed: " + (response.wind.speed) + " m/s");
 
-        $("section").append(newList)
-        $("ul").append(newCityTemp, newCityHumidity, newCityWind)
+        var cityDiv = $("<div.city>").appendTo("div.card")
+
+        tempF = (((response.main.temp) - 273.15) * 1.80 + 32).toFixed(2)
+         $("<div>").addClass("City").text((response.name) + ":  " + moment().format('MMMM Do YYYY, h:mm:ss a')).appendTo(cityDiv)
+         $("<div>").addClass("divItem Temperature").text("Temperature: " + (tempF) + " °F").appendTo(cityDiv)
+         $("<div>").addClass("divItem Humidity").text("Humidity: " + (response.main.humidity) + " %").appendTo(cityDiv)
+         $("<div>").addClass("divItem Wind").text("Wind Speed: " + (response.wind.speed) + " m/s").appendTo(cityDiv)
+        //$("ol").append("<li>Appended item</li>");
+        
+        console.log(response.weather[0].id)
+
+
+        
+        
+        // Thunderstorm, Drizzle, Clear, Rain, Snow, Clouds
+        if(response.weather[0].id >= 200 && response.weather[0].id < 240){
+            $(cityDiv).addClass("thunderstorm")
+        }
+        if(response.weather[0].id >= 300 && response.weather[0].id < 340){
+            $(cityDiv).addClass("drizzle")
+        }
+        if (response.weather[0].id >= 500 && response.weather[0].id < 599 ){
+            $(cityDiv).addClass("rain");
+        }
+        if(response.weather[0].id >= 600 && response.weather[0].id < 630){
+            $(cityDiv).addClass("snow")
+        }
+        if(response.weather[0].id >= 700 && response.weather[0].id < 790){
+            $(cityDiv).addClass("foggy")
+        }
+        if (response.weather[0].id >= 800 && response.weather[0].id < 899){
+            $(cityDiv).addClass("clear");
+        }
+        if(response.weather[0].id >= 801 && response.weather[0].id < 810){
+            $(cityDiv).addClass("clouds")
+        }
+         
+        
+        
+        // $("div.card").append(newList, newCityTemp, newCityHumidity, newCityWind)
+        
+
+
 
 
     })
