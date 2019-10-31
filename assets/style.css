@@ -34,6 +34,10 @@ aside{
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
 }
+.set{
+    width: 90%;
+    margin: 5%;
+}
 section{
     width: 75%;
     float: right;

@@ -2,7 +2,7 @@
 //Everything starts with the click of the search button which pulls the info entered into the from.
 $(".btn-primary").on("click", function () {
     event.preventDefault();
-    city = $(":input.form-control").val();
+    city = ($(":input.form-control").val()) || ($("button.Two").text());
 
     //setting variables for the weather API and the API key
     var APIKey = "166a433c57516f51dfab1f7edaed8413";
