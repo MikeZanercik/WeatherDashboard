@@ -13,14 +13,18 @@ h4{
     color: whitesmoke;
 }
 aside{
+    position: absolute;
+    top: 7%;
+    bottom: 0;
     background: grey;
     float: left;
     width: 25%;
 
 }
-.list-group-item{
-    opacity: 0.2;
-    color: white
+.cityName{
+    padding: 2% 5%;
+    border-radius: 5%;
+    border-bottom: 10px solid white;
 }
 .card{
     color: white;

@@ -11,10 +11,15 @@ $(".btn-primary").on("click", function () {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        console.log(response)
+        var iconId = response.weather[0].icon
+        var weatherIcon="http://openweathermap.org/img/wn/" + iconId + "@2x.png"
+        console.log(weatherIcon)
+        var weatherImage = $("<img>")
+        weatherImage.attr("src", weatherIcon);
+        console.log(weatherImage)
 
-        var cityDiv = $("<div.city>").appendTo("div.card")
-
+        var cityDiv = $("<div>").addClass("cityName").appendTo("div.card")
+        cityDiv.prepend(weatherImage)
         tempF = (((response.main.temp) - 273.15) * 1.80 + 32).toFixed(2)
          $("<div>").addClass("City").text((response.name) + ":  " + moment().format('MMMM Do YYYY, h:mm:ss a')).appendTo(cityDiv)
          $("<div>").addClass("Temperature").text("Temperature: " + (tempF) + " °F").appendTo(cityDiv)
