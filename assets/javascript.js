@@ -20,8 +20,8 @@ $(".btn-primary").on("click", function () {
         weatherImage.attr("src", weatherIcon);
         //adding the icon to the div where the main dispaly is
         var cityDiv = $("<div>").addClass("cityName").appendTo("div.card")
-        cityDiv.prepend(weatherImage)
         //creating divs and appending them to the div.cityName that each display another piece of information regarding the weather in the city.
+        cityDiv.prepend(weatherImage)
         tempF = (((response.main.temp) - 273.15) * 1.80 + 32).toFixed(2)
          $("<div>").addClass("City").text((response.name) + ":  " + moment().format('MMMM Do YYYY, h:mm:ss a')).appendTo(cityDiv)
          $("<div>").addClass("Temperature").text("Temperature: " + (tempF) + " °F").appendTo(cityDiv)
