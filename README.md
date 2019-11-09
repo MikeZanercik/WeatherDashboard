@@ -18,5 +18,5 @@ This is the starting screen presented to the user with no weather data entered:
 ![screen1](./assets\images\startingUI.PNG)
 
 
-This shows the application with the weather information displayed for the city of Charlotte:
+This shows the application with the weather information displayed for multiple cities:
 ![screen2](./assets\images\UIwithcityInfo.PNG)

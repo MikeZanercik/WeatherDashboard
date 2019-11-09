@@ -1,16 +1,20 @@
 *{
     box-sizing: border-box;
 }
-body{
-    width: 100%;
-}
 .header{
     text-align: center;
     color: whitesmoke;
     background: rgb(48, 47, 47);
 }
-
+h1{
+    width: 100vw;
+}
+.sideBar{
+    min-width: 150px;
+    height: 100vh;
+}
 h4{
+    padding: 5%;
     text-align: center;
     color: whitesmoke;
 }
